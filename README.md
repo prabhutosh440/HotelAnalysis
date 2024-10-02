@@ -61,7 +61,37 @@ We segmented the data by **hotel star ratings** and **location** to assess wheth
 - **Location-Based Price Comparison**: Prices varied significantly by neighborhood. In some areas, Expedia offered cheaper rates, while Booking.com was more competitive in others.
 - **Star Rating Impact**: When focusing on 5-star hotels, Booking.com had a slight edge in terms of pricing flexibility and hotel variety.
 
+#### Key Findings:
+- **Price Comparison Based on Review Score Group**:
+* Higher-rated hotels (>8.5) are priced similarly between the two platforms, though Booking.com has more high-end outliers.
+* Lower-rated hotels (<8.5) are generally less expensive on Booking.com, with more price variance seen for cheaper properties.
 
+-**Rooms Available Based on Review Score Group**:
+* Booking.com consistently shows a larger number of rooms left for both high and low review score groups, with particularly high availability in lower-rated hotels (<8.5).
+* Expedia has fewer rooms left across both score groups, with the difference more pronounced for highly rated hotels (>8.5), suggesting better booking performance or limited supply.
+* The number of rooms left on Booking.com is much higher for high-scored hotels, indicating they may have larger capacities or lower occupancy rates than those on Expedia.
+
+-**Price Comparison Based on Distance from Centre**:
+* Hotels closer to the city centre (<2 miles) are priced higher, particularly on Booking.com, with some outliers exceeding $2,000.
+* Hotels located farther from the city centre (>2 miles) tend to have more uniform pricing across both platforms, but Expedia generally lists lower-priced options.
+
+-**Discount% Based on Review Score Group**:
+* Hotels with higher review scores (>8.5) receive considerably higher discounts on Expedia, while Booking.com maintains lower, more consistent discounts across both score groups.
+* There is a wider spread in discounts for higher-scoring hotels on Expedia, with some properties receiving discounts exceeding 50%.
+* Lower-rated hotels (<8.5) have very similar discount percentages on both platforms, indicating less promotional effort for these properties.
+
+-**3D plot comparing Booking (blue dots) and Expedia (red triangles) based on price, review scores, and distance from the centre**:
+* Price: Booking tends to have lower prices compared to Expedia, with most blue dots clustered around lower price points.
+* Review Scores: Booking's review scores are slightly higher, typically around the 9.0 range, whereas Expedia's scores tend to be below 9.0.
+* Distance from Centre: Both Booking and Expedia properties are relatively close to the city centre, but Expedia's properties are slightly farther on average, with distances ranging from 1.2 to 1.7 miles, compared to Booking's range of 1.2 to 1.4 miles.
+
+## Visualization
+
+The analysis also includes various plots to visualize the findings:
+
+- **Price Analysis**: /output_plots/Rate_Analysis/
+- **Inventory Analysis**: /output_plots/Inventory_Analysis/
+- **Additional Analysis**: /output_plots/Additional_Analysis/
 
 ## Results Summary
 
@@ -74,16 +104,6 @@ We segmented the data by **hotel star ratings** and **location** to assess wheth
 | Average Review Score         | 8.2                         | 8.4                           | 9.0                     | 9.1                       |
 | Distance from Center (Miles) | 1.7                         | 1.6                           | 1.3                     | 1.4                       |
 
-## Visualization
-
-The analysis also includes various plots to visualize the findings:
-
-- **Price Distribution**: A bar plot showing the price distribution of common hotels across both platforms.
-- **Cancellation Policy**: A bar chart comparing the proportion of free cancellation policies across platforms.
-- **Review Score Comparison**: A scatter plot showing the relationship between price and review score for both platforms.
-
-![Price Comparison](./images/price_comparison.png)
-*Figure: Price distribution comparison*
 
 ## Conclusion
 
@@ -98,7 +118,4 @@ Based on the analysis, Booking.com appears to have a more diverse inventory and 
 
 ### Running the Scraper
 
-To scrape the hotel data:
-
-```bash
-python scrape_hotels.py
+- Run Hotel_Analysis.py
